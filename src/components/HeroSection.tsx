@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Terminal, Calendar, Trophy } from "lucide-react";
 import FlipClock from "./FlipClock";
+import { getAssetPath } from "@/lib/asset";
 
 interface HeroSectionProps {
   onOpenRegisterModal: () => void;
@@ -42,7 +43,7 @@ export default function HeroSection({ onOpenRegisterModal }: HeroSectionProps) {
 
           <div className="relative w-full h-full flex items-center justify-center">
             <Image
-              src="/images/event-logo.jpg"
+              src={getAssetPath("/images/event-logo.jpg")}
               alt="Hacettepe AI Club Datathon Logo"
               fill
               priority

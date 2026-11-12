@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/asset";
 
 interface NavbarProps {
   onOpenRegisterModal?: () => void;
@@ -64,7 +65,7 @@ export default function Navbar({ onOpenRegisterModal }: NavbarProps) {
         >
           <div className="relative w-12 h-12 md:w-14 md:h-14 transition-transform duration-300 group-hover:scale-105">
             <Image
-              src="/images/community-logo.png"
+              src={getAssetPath("/images/community-logo.png")}
               alt="Hacettepe Üniversitesi Yapay Zeka Topluluğu Logo"
               fill
               priority

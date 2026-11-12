@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { getAssetPath } from "@/lib/asset";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Datathon '26 - Hacettepe AI Club",
     images: [
       {
-        url: "/images/event-logo.jpg",
+        url: getAssetPath("/images/event-logo.jpg"),
         width: 1200,
         height: 630,
         alt: "Hacettepe AI Club Datathon '26",
@@ -53,11 +54,11 @@ export const metadata: Metadata = {
     title: "Hacettepe AI Club - Datathon '26",
     description:
       "Veriyi Geleceğe Dönüştür! 1 - 15 Aralık 2026 tarihlerinde Türkiye geneli veri bilimi maratonu.",
-    images: ["/images/event-logo.jpg"],
+    images: [getAssetPath("/images/event-logo.jpg")],
   },
   icons: {
-    icon: "/images/community-logo.png",
-    apple: "/images/community-logo.png",
+    icon: getAssetPath("/images/community-logo.png"),
+    apple: getAssetPath("/images/community-logo.png"),
   },
 };
 

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { Mail, Globe, ArrowUp } from "lucide-react";
+import { getAssetPath } from "@/lib/asset";
 
 // Crisp SVG Brand Icons
 function LinkedInIcon({ className }: { className?: string }) {
@@ -79,7 +80,7 @@ export default function Footer() {
             >
               <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src="/images/community-logo.png"
+                  src={getAssetPath("/images/community-logo.png")}
                   alt="Hacettepe Üniversitesi Yapay Zeka Topluluğu"
                   fill
                   sizes="64px"
