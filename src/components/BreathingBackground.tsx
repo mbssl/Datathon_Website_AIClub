@@ -11,7 +11,7 @@ export default function BreathingBackground() {
     >
       {/* Animated background image at 33% opacity */}
       <div
-        className="absolute inset-0 animate-bg-drift opacity-[0.67]"
+        className="absolute inset-0 animate-bg-drift opacity-[0.87]"
         style={{
           backgroundImage: `url(${getAssetPath("/images/datathon-background.jpg")})`,
           backgroundSize: "cover",
