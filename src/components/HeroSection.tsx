@@ -43,7 +43,7 @@ export default function HeroSection({ onOpenRegisterModal }: HeroSectionProps) {
 
           <div className="relative w-full h-full flex items-center justify-center">
             <Image
-              src={getAssetPath("/images/event-logo.jpg")}
+              src={getAssetPath("/images/datathon-logo-new.jpg")}
               alt="Hacettepe AI Club Datathon Logo"
               fill
               priority

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getAssetPath } from "@/lib/asset";
 
 export default function BreathingBackground() {
   return (
@@ -8,6 +9,18 @@ export default function BreathingBackground() {
       aria-hidden="true"
       className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-[#030712]"
     >
+      {/* Animated background image at 33% opacity */}
+      <div
+        className="absolute inset-0 animate-bg-drift opacity-[0.33]"
+        style={{
+          backgroundImage: `url(${getAssetPath("/images/datathon-background.jpg")})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          willChange: "transform",
+        }}
+      />
+
       {/* Deep secondary ambient backdrop */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#030712] via-[#050b1d] to-[#030712] opacity-80" />
 
